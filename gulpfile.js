@@ -5,6 +5,7 @@ var sass = require('gulp-sass');
 var cleanCSS = require('gulp-clean-css');
 var rename = require('gulp-rename');
 var zip = require('gulp-zip');
+var deploy = require('gulp-gh-pages');
 var browserSync = require('browser-sync').create();
 var reload = browserSync.reload;
 
@@ -121,6 +122,17 @@ gulp.task(
     return gulp.src(path.root + '**/*')
       .pipe(zip(zipName))
       .pipe(gulp.dest(zipDest));
+  }
+);
+
+// Deploy to GitHub Pages.
+gulp.task(
+  'deploy',
+  function () {
+    logInfo(`Deploying to GitHub Pages`);
+
+    gulp.src(path.root + '**/*')
+      .pipe(deploy());
   }
 );
 
