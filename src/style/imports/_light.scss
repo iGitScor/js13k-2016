@@ -1,0 +1,43 @@
+$light-border: #000;
+$light-color: #f00;
+$light-dark-color: #8b0000;
+
+/* ANIMATION */
+
+.light {
+  display: block;
+  opacity: .85;
+  border-radius: 25px;
+  padding: 10px;
+  margin: 8px 0;
+  width: 100%;
+  background: radial-gradient(ellipse at center, $light-color 0%, $light-dark-color 100%);
+  background-size: 100% 8%;
+  box-shadow: inset 5px 5px 15px $light-border;
+  position: relative;
+  animation-duration: 1s;
+  animation-name: Light;
+  animation-iteration-count: infinite;
+  cursor: default;
+}
+
+@-webkit-keyframes Light {
+  from {
+    box-shadow:
+    inset 0 95px 5px $light-border,
+    inset 0 -95px 5px $light-border;
+  }
+
+  75% {
+    box-shadow:
+    inset 0 -95px 5px $light-border,
+    inset 0 95px 5px $light-border;
+  }
+
+  to {
+    box-shadow:
+    inset 0 5px 5px $light-border,
+    inset 0 -5px 5px $light-border;
+
+  }
+}

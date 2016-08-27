@@ -1,0 +1,58 @@
+$board-color: #000;
+
+main {
+  background-color: $board-color;
+  width: calc(100% - 10px);
+  height: 100%;
+  margin: 0 5px;
+  padding: 30px;
+
+  counter-reset: level;
+}
+
+/************* Helpers *************/
+
+input[type='checkbox'] {
+  z-index: 0;
+  position: absolute;
+  opacity: 0;
+}
+
+.flex {
+  display: flex;
+  height: 100%;
+
+  svg {
+    width: 100%;
+  }
+}
+
+.row {
+  display: table-row;
+}
+
+/************* Out of the pane *************/
+
+input[id*='level']:checked {
+  counter-increment: level;
+}
+
+[class*='abs'] {
+  position: absolute;
+  width: 100%;
+}
+
+/* Level indicator */
+.abs1 {
+  top: 10px;
+  font-weight: bold;
+}
+
+.abs1::after {
+  content: ' ' counter(level);
+}
+
+/* Game result indicator */
+.abs2 {
+  top: 26px;
+}
