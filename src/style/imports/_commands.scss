@@ -1,10 +1,8 @@
-$btn-color: #f5deb3;
-
 .commands {
   width: 100%;
   display: block;
   text-align: center;
-  color: $btn-color;
+  color: $secondary-color;
   font-weight: bold;
 
   @media (max-width: 767px) {
@@ -29,21 +27,17 @@ $btn-color: #f5deb3;
       margin: 8px;
       padding: 20px;
       font-size: 24px;
-
-      & + span {
-        cursor: pointer;
-      }
     }
   }
 
   .continue {
-    color: #a83200;
+    color: $primary-color;
     // display: inline-block;
     display: none;
     text-align: center;
     width: 100%;
     font-weight: bold;
-    background: white;
+    background: $white-color;
     padding: 10px;
     text-transform: uppercase;
     cursor: pointer;

@@ -1,11 +1,9 @@
-$svg-color: #f5deb3;
-
 circle,
 rect,
 path {
-  fill: $svg-color;
+  fill: $secondary-color;
 }
 
 .white {
-  fill: white !important;
+  fill: $white-color;
 }

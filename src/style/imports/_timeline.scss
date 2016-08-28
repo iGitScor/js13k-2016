@@ -1,7 +1,7 @@
 .timeline {
   list-style: none;
   padding: 0;
-  border-bottom: 8px solid #f5deb3;
+  border-bottom: 8px solid $secondary-color;
   border-radius: 8px;
   position: relative;
 
@@ -9,9 +9,9 @@
     position: absolute;
     width: 32px;
     height: 32px;
-    border: 8px solid #a83200;
+    border: 8px solid $primary-color;
     border-radius: 16px;
-    background: #f5deb3;
+    background: $secondary-color;
     margin-top: -12px;
   }
 }

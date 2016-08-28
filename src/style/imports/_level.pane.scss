@@ -34,7 +34,7 @@ input[id*='level'] ~ [class*='level'] {
 h2 {
   text-align: center;
   padding: 5px 16px;
-  color: #f5deb3;
-  background: #a83200;
+  color: $secondary-color;
+  background: $primary-color;
   margin-top: 20px;
 }

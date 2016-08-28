@@ -1,11 +1,8 @@
 /************* Scaffolding *************/
 
-$rust-light: #b7410e;
-$rust-dark: #a83200;
-
 body {
   height: 100vh;
-  background: $rust-dark;
-  font-family: Helvetica, sans-serif;
+  background: $primary-color;
+  font-family: $font;
   overflow: hidden;
 }
