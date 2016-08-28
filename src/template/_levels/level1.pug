@@ -5,9 +5,15 @@
     input#answer2b(type='checkbox')
     .commands
       span
-        label(for='answer2a') Yes
+        label(for='answer2a')
+          include ../_svg/scissor.pug
         span.light
       span
-        label(for='answer2b') No
+        label(for='answer2b')
+          include ../_svg/paper.pug
         span.light
-    label.continue(for='level2', name='answer2a') Continue
+      span
+        label(for='answer2b')
+          include ../_svg/rock.pug
+        span.light
+    label.continue(for='level2', name='answer2a') Continue...
