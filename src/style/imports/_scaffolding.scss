@@ -5,4 +5,8 @@ body {
   background: $primary-color;
   font-family: $font;
   overflow: hidden;
+
+  @media (max-width: 767px) {
+    overflow: auto;
+  }
 }

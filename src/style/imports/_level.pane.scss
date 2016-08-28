@@ -14,6 +14,10 @@ $numberOfLevels: 11;
     height: auto;
     margin-bottom: 20px;
   }
+
+  svg {
+    max-height: 200px;
+  }
 }
 
 input[id*='level'] ~ [class*='level'] {
