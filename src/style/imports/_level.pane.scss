@@ -1,5 +1,7 @@
 /************* Level pane *************/
 
+$numberOfLevels: 11;
+
 /* Pane */
 [class*='level'] {
   width: 66%;
@@ -18,7 +20,7 @@ input[id*='level'] ~ [class*='level'] {
   display: none;
 }
 
-@for $i from 1 through 10 {
+@for $i from 1 through $numberOfLevels {
   .level#{$i} {
 
     input[id='#{"level" + $i}']:checked ~ & {
@@ -37,4 +39,14 @@ h2 {
   color: $secondary-color;
   background: $primary-color;
   margin-top: 20px;
+}
+
+p {
+  color: $white-color;
+  font-weight: bold;
+  text-align: center;
+}
+
+#answer2a:checked ~ .continue {
+  display: block;
 }

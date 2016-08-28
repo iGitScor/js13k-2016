@@ -55,10 +55,18 @@ input[id*='level']:checked {
   top: 12px;
   font-weight: bold;
   text-align: center;
+
+  #level11:checked ~ #result > & {
+    color: transparent;
+  }
 }
 
 .abs1::after {
   content: ' ' counter(level);
+
+  #level11:checked ~ #result > & {
+    content: '';
+  }
 }
 
 /* Game result indicator */
