@@ -22,6 +22,11 @@ input[type='checkbox'] {
   display: flex;
   height: 100%;
 
+  @media (max-width: 767px) {
+    display: block;
+    padding-top: 48px;
+  }
+
   svg {
     width: 100%;
   }
@@ -40,12 +45,16 @@ input[id*='level']:checked {
 [class*='abs'] {
   position: absolute;
   width: 100%;
+  color: wheat;
+  background-color: #a83200;
+  padding: 10px;
 }
 
 /* Level indicator */
 .abs1 {
-  top: 10px;
+  top: 12px;
   font-weight: bold;
+  text-align: center;
 }
 
 .abs1::after {
@@ -54,5 +63,9 @@ input[id*='level']:checked {
 
 /* Game result indicator */
 .abs2 {
-  top: 26px;
+  top: 42px;
+
+  &:empty {
+    padding: 0;
+  }
 }

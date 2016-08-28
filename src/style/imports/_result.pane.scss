@@ -6,4 +6,10 @@
   height: 100%;
   float: left;
   position: relative;
+
+  @media (max-width: 767px) {
+    display: block;
+    width: 100%;
+    float: none;
+  }
 }

@@ -6,24 +6,46 @@ $btn-color: #f5deb3;
   text-align: center;
   color: $btn-color;
   font-weight: bold;
-  border-bottom: 1px solid $btn-color;
+
+  @media (max-width: 767px) {
+    border-bottom-width: 0;
+  }
 
   > span {
     display: inline-block;
     text-align: center;
     padding: 16px 32px;
     width: 50%;
-    border: 5px double $btn-color;
+
+    @media (max-width: 767px) {
+      display: block;
+      width: 100%;
+      margin-bottom: 10px;
+    }
 
     label {
       cursor: pointer;
       display: block;
-      margin: 8px 32px;
-      padding: 20px 0;
+      margin: 8px;
+      padding: 20px;
+      font-size: 24px;
 
       & + span {
         cursor: pointer;
       }
     }
+  }
+
+  .continue {
+    color: #a83200;
+    // display: inline-block;
+    display: none;
+    text-align: center;
+    width: 100%;
+    font-weight: bold;
+    background: white;
+    padding: 10px;
+    text-transform: uppercase;
+    cursor: pointer;
   }
 }
