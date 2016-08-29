@@ -77,3 +77,24 @@ input[id*='level']:checked {
     padding: 0;
   }
 }
+
+.result {
+  display: none;
+}
+
+/* IA */
+#ia2wrong:checked {
+  & ~ .level2  {
+    .commands {
+      display: none;
+    }
+
+    .result {
+      display: block;
+    }
+  }
+
+  & ~ #result .white {
+    display: none;
+  }
+}

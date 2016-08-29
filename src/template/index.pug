@@ -9,9 +9,21 @@ html(lang='en')
       //- Level switcher trick
       each val in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
         if val == 1
-          input(id='level'+val, type='checkbox', checked='checked')
+          //- Start at level 1
+          input(
+            id='level' + val,
+            type='checkbox',
+            checked='checked'
+          )
         else
-          input(id='level'+val, type='checkbox')
+          input(
+            id='level' + val,
+            type='checkbox'
+          )
+
+        //- Only inputs for level with logic
+        if val == 2
+          include _ia/level2.pug
       //- Game pane
       include _game.pane.pug
       //- Result pane
