@@ -98,3 +98,40 @@ input[id*='level']:checked {
     display: none;
   }
 }
+
+#ia7wrong:checked {
+  & ~ .level7  {
+    .commands {
+      display: none;
+    }
+
+    .result {
+      display: block;
+    }
+  }
+
+  & ~ #result {
+    .white,
+    #rhead {
+      display: none;
+    }
+  }
+}
+
+.good {
+  display: block;
+}
+
+.bad {
+  display: none;
+}
+
+[id*="ia"]:checked ~ .end {
+  .bad {
+    display: block;
+  }
+
+  .good {
+    display: none;
+  }
+}
