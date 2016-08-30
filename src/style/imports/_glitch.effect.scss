@@ -1,0 +1,62 @@
+.glitch {
+  color: $secondary-color;
+  font-size: 80px;
+  position: relative;
+}
+
+/** Animation mixin **/
+@mixin noise {
+  $steps: 15;
+  $random: 100;
+  @for $i from 0 through $steps {
+    #{ percentage($i * ( 1 / $steps )) } {
+      clip: rect(random($random) + px, 9999px, random($random) + px, 0);
+    }
+  }
+}
+
+/** To have different random display, we have to generate to keyframes **/
+@keyframes noise-anim {
+  @include noise;
+}
+
+@keyframes noise-anim-2 {
+  @include noise;
+}
+
+/** Glitches helpers **/
+@mixin glitch($animation, $shadow, $shift) {
+  left: $shift;
+  text-shadow: $shadow;
+  animation: $animation;
+}
+
+%glitch {
+  color: $secondary-color;
+  background: $black-color;
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+  clip: rect(0, 700px, 0, 0);
+}
+
+/** Before element **/
+$animation: noise-anim-2 3s infinite linear alternate-reverse;
+$shadow: 7px 0 $accent-primary-color;
+$shift: -2px;
+
+.glitch::before {
+  @extend %glitch;
+  @include glitch($animation, $shadow, $shift);
+}
+
+/** After element **/
+$animation: noise-anim 2s infinite linear alternate-reverse;
+$shadow: -2px 0 $accent-primary-color;
+$shift: 2px;
+
+.glitch::after {
+  @extend %glitch;
+  @include glitch($animation, $shadow, $shift);
+}

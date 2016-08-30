@@ -78,3 +78,26 @@ p {
 #answer2a:checked ~ .continue {
   display: block;
 }
+
+#ia3wrong:checked ~ .level3 .continue,
+#answer3a:checked ~ .continue {
+  display: block;
+}
+
+#ia3wrong ~ .level5 {
+  .end,
+  .glitch {
+    display: none;
+  }
+}
+
+#ia3wrong:checked ~ .level5 {
+  .end,
+  .glitch {
+    display: block;
+  }
+
+  .commands {
+    display: none;
+  }
+}
