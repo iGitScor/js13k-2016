@@ -92,9 +92,12 @@ p {
 }
 
 #ia3wrong:checked ~ .level5 {
-  .end,
-  .glitch {
+  .end {
     display: block;
+  }
+
+  .glitch {
+    display: inline-block;
   }
 
   .commands {
