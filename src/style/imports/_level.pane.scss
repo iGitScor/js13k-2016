@@ -1,6 +1,6 @@
 /************* Level pane *************/
 
-$numberOfLevels: 11;
+$number-of-levels: 10;
 
 /* Pane */
 [class*='level'] {
@@ -24,7 +24,7 @@ input[id*='level'] ~ [class*='level'] {
   display: none;
 }
 
-@for $i from 1 through $numberOfLevels {
+@for $i from 1 through $number-of-levels {
   .level#{$i} {
 
     input[id='#{"level" + $i}']:checked ~ & {
@@ -32,6 +32,30 @@ input[id*='level'] ~ [class*='level'] {
     }
 
     input[id='#{"level" + ($i + 1)}']:checked ~ & {
+      display: none !important;
+    }
+  }
+}
+
+#iaa:checked {
+  & ~ .levela {
+    display: table;
+  }
+
+  @for $i from 1 through $number-of-levels {
+    & ~ .level#{$i} {
+      display: none !important;
+    }
+  }
+}
+
+#iab:checked {
+  & ~ .levelb {
+    display: table;
+  }
+
+  @for $i from 1 through $number-of-levels {
+    & ~ .level#{$i} {
       display: none !important;
     }
   }

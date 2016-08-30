@@ -7,7 +7,7 @@ html(lang='en')
   body
     main
       //- Level switcher trick
-      each val in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+      each val in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 'a', 'b']
         if val == 1
           //- Start at level 1
           input(
@@ -20,7 +20,15 @@ html(lang='en')
             id='level' + val,
             type='checkbox'
           )
-
+        
+        input(
+          id='iaa',
+          type='checkbox'
+        )
+        input(
+          id='iab',
+          type='checkbox'
+        )
         //- Only inputs for level with logic
         if val == 2
           include _ia/level2.pug
