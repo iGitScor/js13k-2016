@@ -40,6 +40,10 @@ input[type='checkbox'] {
   text-align: center;
 }
 
+.only-result {
+  display: none;
+}
+
 /************* Out of the pane *************/
 
 input[id*='level']:checked {
@@ -122,6 +126,26 @@ input[id*='level']:checked {
   }
 }
 
+#ia10wrong:checked {
+  & ~ .level10  {
+    .commands {
+      display: none;
+    }
+
+    .result {
+      display: block;
+    }
+
+    .glitch {
+      display: inline-block;
+    }
+
+    .only-result {
+      display: inherit;
+    }
+  }
+}
+
 .good {
   display: block;
 }
@@ -130,7 +154,7 @@ input[id*='level']:checked {
   display: none;
 }
 
-[id*="ia"]:checked ~ .end {
+[id*='ia'][id$='wrong']:checked ~ .end {
   .bad {
     display: block;
   }

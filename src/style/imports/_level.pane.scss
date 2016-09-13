@@ -104,3 +104,30 @@ p {
     display: none;
   }
 }
+
+
+#ia4wrong:checked ~ .level4 .continue,
+#answer4a:checked ~ .continue {
+  display: block;
+}
+
+#ia4wrong ~ .level6 {
+  .end,
+  .glitch {
+    display: none;
+  }
+}
+
+#ia4wrong:checked ~ .level6 {
+  .end {
+    display: block;
+  }
+
+  .glitch {
+    display: inline-block;
+  }
+
+  .commands {
+    display: none;
+  }
+}
